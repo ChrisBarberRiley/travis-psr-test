@@ -2,4 +2,4 @@
 
 echo 'testing only changed files';
 
-echo test;
+echo test

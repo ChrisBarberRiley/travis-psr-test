@@ -1,11 +1,11 @@
 name: "PHPCS - PSR12 code check"
 
 on:
-  push:
+  pull_request:
     paths:
       - "**.php"
       - "phpcs.xml"
-      - ".github/workflows/lint.yml"
+      - ".github/workflows/phpcs.yml"
 
 jobs:
   phpcs:
@@ -23,4 +23,4 @@ jobs:
         with:
           files: "**.php"
           phpcs_path: php phpcs.phar
-          standard: phpcs.xml
+          standard: PSR12
